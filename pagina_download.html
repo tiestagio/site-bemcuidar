@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Download</title>
+</head>
+<body>
+    <iframe src="assets/img/exame-pdf.pdf" width="100%" height="600px"></iframe>
+
+  
+    <script>
+        function imprimirPDF() {
+            var pdfFrame = document.createElement('iframe');
+            pdfFrame.style.display = 'none';
+            pdfFrame.src = 'assets/img/exame-pdf.pdf';
+            document.body.appendChild(pdfFrame);
+            pdfFrame.contentWindow.focus();
+            pdfFrame.contentWindow.print();
+        }
+    </script>
+</body>
+</html>

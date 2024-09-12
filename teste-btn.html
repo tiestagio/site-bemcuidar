@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Redirecionar para WhatsApp</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+        }
+
+        .btn {
+            padding: 15px 25px;
+            font-size: 18px;
+            cursor: pointer;
+            border: none;
+            background-color: #25D366;
+            color: white;
+            border-radius: 5px;
+        }
+
+        .btn:hover {
+            background-color: #1ebe5b;
+        }
+
+        /* Estilos do Modal */
+        .modal {
+            display: none; 
+            position: fixed; 
+            z-index: 1; 
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5); /* Fundo escuro */
+            justify-content: center;
+            align-items: center;
+        }
+
+        .modal-content {
+            background-color: white;
+            padding: 20px;
+            border-radius: 5px;
+            text-align: center;
+            width: 300px;
+            box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1);
+        }
+
+        .modal-content a {
+            display: block;
+            padding: 10px;
+            margin: 10px 0;
+            text-decoration: none;
+            color: white;
+            background-color: #25D366;
+            border-radius: 5px;
+            font-size: 18px;
+        }
+
+        .modal-content a:hover {
+            background-color: #1ebe5b;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Botão que abre o modal -->
+<button class="btn" onclick="openModal()">Enviar Mensagem</button>
+
+<!-- Modal -->
+<div id="myModal" class="modal">
+    <div class="modal-content">
+        <h2>Escolha o Atendimento</h2>
+        <a href="https://wa.me/5581999999999" target="_blank">Atendimento 1</a>
+        <a href="https://wa.me/5581988888888" target="_blank">Atendimento 2</a>
+    </div>
+</div>
+
+<script>
+    // Função para abrir o modal
+    function openModal() {
+        document.getElementById("myModal").style.display = "flex";
+    }
+
+    // Fecha o modal quando o usuário clicar fora da caixa de diálogo
+    window.onclick = function(event) {
+        const modal = document.getElementById("myModal");
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    }
+</script>
+
+</body>
+</html>

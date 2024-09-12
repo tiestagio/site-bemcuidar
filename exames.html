@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Receber Exames</title>
+    <link rel="stylesheet" href="styles2.css">
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+</head>
+<body>
+
+<div class="login-container">
+    <h2>Resultado</h2>
+    <form action="pagina_download.html" method="get" target="_blank">
+        <label for="cpf">Insira os dados requeridos</label>
+        <input type="text" id="cpf" name="cpf" placeholder="Digite aqui seu CPF ou número do Exame" required>
+        
+        <!-- reCAPTCHA "Não sou um robô" -->
+        <div class="g-recaptcha" data-sitekey="6LfhFDwqAAAAAHnZ0FxgVSN6bk-UVptjo_X8CVJL"></div>
+
+        <button type="submit">Confirmar</button>
+    </form>
+</div>
+
+</body>
+</html>
